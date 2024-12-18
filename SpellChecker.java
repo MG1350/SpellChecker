@@ -11,16 +11,19 @@ public class SpellChecker
       // WRITE Your Methods HERE!
       public void print10()
       {
-        for(int i = 0; i < 10; i++)
+        int i = 0;
+        for(String word : dictionary)
         {
-          System.out.println(dictionary[i]);
+          if (i < 10)
+          System.out.println(word);
+          i++;
         }
       }
       public boolean spellcheck(String s)
       {
-        for(int i = 0; i < dictionary.length; i++)
+        for(String word : dictionary)
         {
-          if(dictionary[i].equals(s))
+          if(word.equals(s))
           {
             return true;
           }
@@ -29,11 +32,11 @@ public class SpellChecker
       }
       public void printStartsWith(String s)
       {
-        for(int i = 0; i < dictionary.length; i++)
+        for(String word : dictionary)
         {
-          if(dictionary[i].startsWith(s))
+          if(word.startsWith(s))
           {
-            System.out.println(dictionary[i]);
+            System.out.println(word);
           }
         }
       }
